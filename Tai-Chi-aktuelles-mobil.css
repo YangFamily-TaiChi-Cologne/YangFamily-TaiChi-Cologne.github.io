@@ -1,0 +1,162 @@
+body {
+	margin: 0;
+	padding: 0;	
+	width: 100%;
+	background-color: #ffffff;
+	display: grid;
+	grid-template-areas: 
+    "nav nav nav"
+    "neu neu neu"
+    "footer footer footer";
+  grid-gap: 0px;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 70px 1fr 230px;
+}
+
+#kopfzeile {
+	display: none;  
+  grid-area: header;
+  background-color: #2b5ac6;
+  font-family: arial, helvetica, sans-serif;
+	color: whitesmoke;
+	font-size: 1em;
+	padding: 1.5em 0 1.5em 1em;
+	position: relative;
+  }
+  
+#navigation {
+	grid-area: nav;
+	background-color: #2b5ac6;
+	font-family: arial, helvetica, sans-serif;
+	color: whitesmoke;
+	font-size: 1em;
+	padding: 0.5em;
+	position: relative;
+	font-weight: bold;
+	text-align: left;
+	
+}
+
+#mail {
+	display: none;	
+	grid-area: kontakt;
+	background-color: #2b5ac6;
+	font-family: arial, helvetica, sans-serif;
+	color: whitesmoke;
+	font-size: 1em;
+	padding: 1.5em 0 1.5em 0;
+	position: relative;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;	
+}
+
+#interesse {
+	text-decoration: none;	
+	font-size: 1em;
+	color: gray;
+	border: thin solid;
+	text-align: center;	
+	background-color:#ffffff;
+	border-radius:6px;
+	padding: 0.7em 1em 0.7em 1em;
+}
+nav a {
+	text-decoration: none;
+	color: #ffffff;
+}
+nav a:focus,
+nav a:hover,
+nav a:active {    
+    text-decoration:underline;
+}
+nav a:visited {
+	color: #ffffff;
+}
+nav li {
+	display: inline-block;
+	list-style: none;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 1em;
+	color: #ffffff;
+	margin: 0em 0.8em 0em 0em; 
+}
+
+article ul {
+	list-style-type: circle;
+	}
+	
+article h3 {
+	margin-bottom: -0.8em;
+}
+
+article img {
+	height: 350px;
+	padding: 1.2em 0em 0em 0em;
+}
+
+figcaption {
+	font-size: 0.8em;
+	line-height: 115%;
+}
+
+#aktuelles {
+	grid-area: neu;
+	font-family: arial, helvetica, sans-serif;
+	line-height: 150%;
+	padding: 1.5em 1.2em 2em 2em;
+}
+
+ul {
+	list-style-type: none;
+}
+li > a {
+	text-decoration: none;
+}
+
+
+
+#probestunde {
+	text-decoration: none;	
+	font-size: 1em;
+	color: black;
+	border: thin solid;
+	text-align: center;	
+	background-color:#ffffff;
+	border-radius:6px;
+	padding: 1em 1.8em 1em 1.8em;
+}
+
+
+a[aria-current],
+a:focus[aria-current] {
+	color: white;
+	text-decoration: underline;
+}
+a:hover[aria-current] {
+	text-decoration: underline;	
+}
+
+
+h1 {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 2.5em;
+	line-height: 1em;
+}
+
+#endzeile {
+	grid-area: footer;
+	background-color: #2b5ac6;
+	padding: 1.5em;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 1em;
+	color: whitesmoke;  
+	text-align: center;
+} 
+
+footer > a:visited {
+	color: #91D507
+}
+footer > a:link {
+	color: whitesmoke;
+}
