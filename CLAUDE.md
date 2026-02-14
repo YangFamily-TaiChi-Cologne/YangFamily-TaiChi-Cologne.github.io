@@ -11,13 +11,13 @@
 
 ### CSS Strategy
 
-- Each page has **two CSS files**: desktop (`Tai-Chi-*.css`) and mobile (`Tai-Chi-*-mobil.css`)
+* Each page has **two CSS files**: desktop (`Tai-Chi-*.css`) and mobile (`Tai-Chi-*-mobil.css`)
 * Responsive breakpoint at `50em` using media queries in `<link>` tags
 * Layout uses CSS Grid with named grid areas
 
 ### Pages
 
-- `index.html` - Home (uses `Tai-Chi.css`)
+* `index.html` - Home (uses `Tai-Chi.css`)
 * `kurse.html` - Courses (uses `Tai-Chi-Kurse.css`)
 * `ueber-uns.html` - About us (uses `Tai-Chi-ueberuns.css`)
 * `kontakt.html` - Contact (uses `Tai-Chi-kontakt.css`)
@@ -26,7 +26,7 @@
 
 ### Assets
 
-- `Bilder/` - Photos and logo
+* `Bilder/` - Photos and logo
 * `images/` - Favicon
 
 ## Development
