@@ -80,6 +80,15 @@ h1, h2, h3, h4 {
   font-size: 1.1rem;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav__logo-img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
 }
 
 .nav__links {
@@ -786,6 +795,15 @@ h1, h2, h3, h4 {
   object-fit: cover;
 }
 
+.split__image--contain {
+  object-fit: contain;
+  background: var(--color-light);
+  padding: 2rem;
+  aspect-ratio: 1 / 1;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 @media (max-width: 768px) {
   .split, .split--reverse {
     grid-template-columns: 1fr;
@@ -811,6 +829,56 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* ===== Hero video (YouTube background) ===== */
+.hero__video-wrap {
+  position: absolute;
+  inset: -60px;
+  overflow: hidden;
+}
+
+.hero__video-wrap iframe {
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.78vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+/* ===== Aktuelles: section divider ===== */
+.section-divider {
+  text-align: center;
+  padding: 2rem 2rem 0;
+  position: relative;
+}
+
+.section-divider__arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section-divider__arrow svg {
+  width: 20px;
+  height: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
 }
 
 /* ===== Partner links ===== */
