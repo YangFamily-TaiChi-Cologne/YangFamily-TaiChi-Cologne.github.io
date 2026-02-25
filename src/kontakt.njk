@@ -1,0 +1,62 @@
+---
+layout: base.njk
+title: "Kontakt"
+description: "Kontakt zum Yang Family Tai Chi Dao Köln e.V. – Probestunde anfragen, Trainingsorte und Anfahrt."
+permalink: /kontakt/
+---
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <h1 class="page-hero__title">Bereit für den ersten Schritt?</h1>
+  <p class="page-hero__subtitle">Der beste Weg, Taijiquan zu verstehen, ist, es zu spüren. Komm unverbindlich zur Probestunde.</p>
+</div>
+
+<!-- Contact -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h2 class="section__title">Schreib uns</h2>
+        <form class="contact-form" action="mailto:{{ site.email }}" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Nachricht <span style="font-weight:400; text-transform:none;">(z.B. Wann möchtest du zur Probestunde kommen?)</span></label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Nachricht senden</button>
+        </form>
+        <p style="margin-top:1.5rem; font-size:0.9rem; color:var(--color-muted);">Oder schreib uns direkt: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+
+      <div>
+        <h2 class="section__title">Trainingsorte</h2>
+
+        <div class="contact-info__item">
+          <span class="contact-info__label">Dienstag &amp; Freitag</span>
+          <p>Görresstraße 1, Köln-Innenstadt<br><small>(Nähe Rathenauplatz)</small></p>
+          <a href="https://www.openstreetmap.org/?mlat=50.93078&mlon=6.93531#map=17/50.93078/6.93531" target="_blank" rel="noopener" style="font-size:0.9rem;">Auf OpenStreetMap anzeigen &rarr;</a>
+        </div>
+
+        <div class="contact-info__item" style="margin-top:2rem;">
+          <span class="contact-info__label">Donnerstag</span>
+          <p>Turnhalle, Osterather Str. 13<br>50739 Köln-Nippes</p>
+          <a href="https://www.openstreetmap.org/?mlat=50.95873&mlon=6.93796#map=16/50.95873/6.93796" target="_blank" rel="noopener" style="font-size:0.9rem;">Auf OpenStreetMap anzeigen &rarr;</a>
+        </div>
+
+        <div class="contact-info__item" style="margin-top:2rem;">
+          <span class="contact-info__label">E-Mail</span>
+          <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+
+        <p style="margin-top:2rem; font-size:0.95rem; color:var(--color-muted);">Eine Probestunde ist nach vorheriger Kontaktaufnahme jederzeit möglich – in bequemer Kleidung, ohne Vorkenntnisse.</p>
+      </div>
+    </div>
+  </div>
+</section>

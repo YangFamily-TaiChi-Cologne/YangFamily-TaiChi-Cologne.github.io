@@ -1,0 +1,58 @@
+---
+layout: base.njk
+title: "Aktuelles"
+description: "Aktuelles vom Yang Family Tai Chi Dao Köln e.V. – News, Seminare, Events und Rückblicke."
+permalink: /aktuelles/
+---
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <h1 class="page-hero__title">Aktuelles</h1>
+  <p class="page-hero__subtitle">Neuigkeiten, Seminare und Rückblicke aus dem Vereinsleben.</p>
+</div>
+
+<!-- Kursplan -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Aktueller Kursplan</h2>
+    <div class="video-wrapper" style="padding-bottom:65%;">
+      <iframe src="https://kalender.digital/ec33d1a8713c730ca489?iframe=true" title="Kursplan"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Divider: scroll hint -->
+<div class="section-divider">
+  <span class="section-divider__arrow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    Neuigkeiten &amp; Rückblicke
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </span>
+</div>
+
+<!-- News Timeline -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title">Neuigkeiten</h2>
+
+    <div class="timeline">
+      {%- for post in collections.news %}
+      <div class="timeline__item">
+        <span class="timeline__date">{{ post.data.displayDate | default(post.date | germanDate) }}</span>
+        <h3 class="timeline__title">{{ post.data.title }}</h3>
+        <div class="timeline__text">{{ post.templateContent | safe }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- YouTube -->
+<section class="section">
+  <div class="container text-center">
+    <p class="section__text section__text--center">Weitere Möglichkeiten, Tai Chi zu üben, bietet der Youtube-Kanal der Yang Family Association:</p>
+    <div style="margin-top:1.5rem;">
+      <a href="https://www.youtube.com/user/yangfamilytaichi" class="btn btn--outline" target="_blank" rel="noopener">Youtube-Kanal der Yang Family</a>
+    </div>
+  </div>
+</section>

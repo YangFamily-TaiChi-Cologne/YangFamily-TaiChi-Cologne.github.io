@@ -1,0 +1,103 @@
+---
+layout: base.njk
+htmlTitle: "Yang Family – Tai Chi Dao Köln e.V."
+description: "Authentisches Taijiquan in Köln – Kampfkunst für Körper, Koordination und mentale Klarheit. Gemeinnützig. Traditionell zertifiziert."
+keywords: "Tai Chi, Taichi, Taijiquan, Yang Stil, Yang Family, Köln, Kampfkunst, Gesundheit, Tuishou, Push Hands"
+permalink: /
+---
+
+<!-- Hero (Video Background) -->
+<section class="hero">
+  <div class="hero__video-wrap">
+    <iframe src="https://www.youtube-nocookie.com/embed/Rf0YvmuGXOw?autoplay=1&mute=1&loop=1&playlist=Rf0YvmuGXOw&controls=0&showinfo=0&modestbranding=1&playsinline=1&rel=0&disablekb=1" allow="autoplay; encrypted-media" title="Tai Chi Background Video"></iframe>
+  </div>
+  <!-- Fallback image for slow connections -->
+  <img class="hero__image" src="/current/Bilder/Tuishou.jpg" alt="Tai Chi Training">
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1 class="hero__title">Ankommen. Verwurzeln. Bewegen.</h1>
+    <p class="hero__subtitle">Authentisches Taijiquan in Köln – Kampfkunst für Körper, Koordination und mentale Klarheit. Gemeinnützig. Traditionell zertifiziert.</p>
+    <a href="/kontakt/" class="btn btn--primary">Kostenlose Probestunde</a>
+  </div>
+</section>
+
+<!-- Warum zu uns -->
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="section__label">Warum zu uns?</span>
+        <h2 class="section__title">Kampfkunst mit System. Verein mit Herz.</h2>
+        <p class="section__text">Taijiquan ist mehr als Entspannung. Es ist ein präzises Bewegungssystem, das Körperstruktur, Koordination und Energiefluss trainiert. Wir unterrichten den traditionellen Yang-Stil nach Meister Yang Chengfu – zertifiziert durch die International Yang Family Tai Chi Chuan Association unter Großmeister Yang Jun.</p>
+        <ul class="features">
+          <li>Fundierte Methodik mit wissenschaftlichem Verständnis</li>
+          <li>Schrittweiser Aufbau von innerer Kraft (Jin) und Körperbewusstsein</li>
+          <li>Langjährig ausgebildete Lehrkräfte mit internationaler Zertifizierung</li>
+          <li>Kölner Vereinsgemeinschaft</li>
+        </ul>
+        <p class="section__text" style="margin-top:1rem;">Fachlich korrekt. Menschlich nah. Für jedes Alter geeignet.</p>
+      </div>
+      <img class="split__image split__image--contain" src="/current/Bilder/Logo_Startseite_Dao_Yang Family.png" alt="Logo Tai Chi Dao Köln und Yang Family">
+    </div>
+  </div>
+</section>
+
+<!-- 3 Säulen -->
+<section class="section section--alt">
+  <div class="container text-center">
+    <span class="section__label">Was dich erwartet</span>
+    <h2 class="section__title">Drei Säulen unseres Trainings</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <h3 class="pillar__title">Gesundheit &amp; Bewegungsqualität</h3>
+        <p class="pillar__text">Stärke Rücken, Gelenke und Herz-Kreislauf-System. Verbessere Balance, Flexibilität und Körperwahrnehmung durch achtsames Training.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="pillar__title">Kampfkunst &amp; Prinzipien</h3>
+        <p class="pillar__text">Erlerne die 10 essenziellen Prinzipien des Tai Chi Chuan nach Yang Chengfu: von Körperstruktur über Atmung bis zur Anwendung in Partnerübungen (Tuishou).</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 class="pillar__title">Gemeinschaft in Köln</h3>
+        <p class="pillar__text">Ob im Trainingsraum oder im Sommer sonntags beim Outdoor-Training im Grüngürtel („Kölle aktiv") – wir bewegen uns zusammen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News Preview -->
+<section class="section">
+  <div class="container">
+    <span class="section__label">Aktuelles</span>
+    <h2 class="section__title">Neues aus dem Verein</h2>
+    <div class="news-grid">
+      {%- for post in collections.news | head(3) %}
+      <div class="news-card">
+        <span class="news-card__date">{{ post.data.displayDate | default(post.date | germanDate) }}</span>
+        <h3 class="news-card__title">{{ post.data.title }}</h3>
+        <p class="news-card__text">{{ post.data.summary }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+    <div class="text-center" style="margin-top:2.5rem;">
+      <a href="/aktuelles/" class="btn btn--outline">Mehr Neuigkeiten</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="section section--dark text-center">
+  <div class="container">
+    <h2 class="section__title">Bereit für den ersten Schritt?</h2>
+    <p class="section__text section__text--center" style="color:rgba(255,255,255,0.7); margin-bottom:2rem;">Der beste Weg, Taijiquan zu verstehen, ist, es zu spüren. Komm unverbindlich zur Probestunde – in bequemer Kleidung, ohne Vorkenntnisse.</p>
+    <a href="/kontakt/" class="btn btn--primary">Jetzt Kontakt aufnehmen</a>
+  </div>
+</section>

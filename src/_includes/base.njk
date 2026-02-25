@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analyticsId }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.analyticsId }}');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description }}">
+  {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
+  <title>{{ htmlTitle | default(title + ' – ' + site.title) }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/current/images/Dao-Favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <a class="nav__logo" href="/"><img class="nav__logo-img" src="/current/images/Dao-Favicon.svg" alt="Logo">Yang Family – Tai Chi Dao Köln</a>
+  <ul class="nav__links" id="navLinks">
+    {%- set navItems = [
+      { url: "/", label: "Startseite" },
+      { url: "/training/", label: "Training &amp; Kurse" },
+      { url: "/ueber-uns/", label: "Über uns" },
+      { url: "/aktuelles/", label: "Aktuelles" },
+      { url: "/kontakt/", label: "Kontakt" }
+    ] -%}
+    {%- for item in navItems %}
+    <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label | safe }}</a></li>
+    {%- endfor %}
+  </ul>
+  <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+{{ content | safe }}
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__brand">{{ site.title }}</div>
+      <p class="footer__text">Authentisches Taijiquan in Köln. Zertifiziert durch die International Yang Family Tai Chi Chuan Association.</p>
+    </div>
+    <div>
+      <div class="footer__heading">Navigation</div>
+      <ul class="footer__links">
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/training/">Training &amp; Kurse</a></li>
+        <li><a href="/ueber-uns/">Über uns</a></li>
+        <li><a href="/aktuelles/">Aktuelles</a></li>
+        <li><a href="/kontakt/">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer__heading">Kontakt</div>
+      <ul class="footer__links">
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="/kontakt/">Probestunde anfragen</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2026 {{ site.title }}</span>
+    <span><a href="/impressum/">Impressum</a> · <a href="/impressum/#datenschutz">Datenschutz</a></span>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" aria-label="Nach oben">&#8593;</button>
+
+<script>
+// Mobile nav toggle
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+  links.classList.toggle('open');
+  toggle.setAttribute('aria-label', links.classList.contains('open') ? 'Menü schließen' : 'Menü öffnen');
+});
+
+// Close nav on link click
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+// Scroll to top button
+const scrollBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => scrollBtn.classList.toggle('visible', window.scrollY > 600));
+scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+</body>
+</html>
