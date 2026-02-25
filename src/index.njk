@@ -7,97 +7,97 @@ permalink: /
 ---
 
 <!-- Hero (Video Background) -->
-<section class="hero">
-  <div class="hero__video-wrap">
+<section class="relative h-screen min-h-150 flex items-center justify-center text-center overflow-hidden bg-ink">
+  <div class="hero-video-wrap absolute -inset-15 overflow-hidden">
     <iframe src="https://www.youtube-nocookie.com/embed/Rf0YvmuGXOw?autoplay=1&mute=1&loop=1&playlist=Rf0YvmuGXOw&controls=0&showinfo=0&modestbranding=1&playsinline=1&rel=0&disablekb=1" allow="autoplay; encrypted-media" title="Tai Chi Background Video"></iframe>
   </div>
   <!-- Fallback image for slow connections -->
-  <img class="hero__image" src="/bilder/Tuishou.jpg" alt="Tai Chi Training">
-  <div class="hero__overlay"></div>
-  <div class="hero__content">
-    <h1 class="hero__title">Ankommen. Verwurzeln. Bewegen.</h1>
-    <p class="hero__subtitle">Authentisches Taijiquan in Köln – Kampfkunst für Körper, Koordination und mentale Klarheit. Gemeinnützig. Traditionell zertifiziert.</p>
-    <a href="/kontakt/" class="btn btn--primary">Kostenlose Probestunde</a>
+  <img class="absolute inset-0 w-full h-full object-cover opacity-35" src="/bilder/Tuishou.jpg" alt="Tai Chi Training">
+  <div class="absolute inset-0 bg-linear-to-b from-ink/30 via-ink/60 to-ink/85"></div>
+  <div class="relative z-2 max-w-200 p-8">
+    <h1 class="font-heading text-[clamp(2.5rem,6vw,4.5rem)] text-white font-bold tracking-wide mb-6 leading-tight max-md:text-[clamp(2rem,8vw,3rem)]">Ankommen. Verwurzeln. Bewegen.</h1>
+    <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/85 font-light leading-relaxed mb-10 max-w-150 mx-auto">Authentisches Taijiquan in Köln – Kampfkunst für Körper, Koordination und mentale Klarheit. Gemeinnützig. Traditionell zertifiziert.</p>
+    <a href="/kontakt/" class="inline-block bg-gold text-white px-10 py-4 rounded-sm text-[0.95rem] font-medium tracking-widest uppercase transition-all duration-300 hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(184,149,62,0.3)]">Kostenlose Probestunde</a>
   </div>
 </section>
 
 <!-- Warum zu uns -->
-<section class="section">
-  <div class="container">
-    <div class="split">
+<section class="py-24 px-8 max-md:py-16 max-md:px-6">
+  <div class="max-w-300 mx-auto">
+    <div class="grid grid-cols-2 gap-16 items-center max-md:grid-cols-1 max-md:gap-8">
       <div>
-        <span class="section__label">Warum zu uns?</span>
-        <h2 class="section__title">Kampfkunst mit System. Verein mit Herz.</h2>
-        <p class="section__text">Taijiquan ist mehr als Entspannung. Es ist ein präzises Bewegungssystem, das Körperstruktur, Koordination und Energiefluss trainiert. Wir unterrichten den traditionellen Yang-Stil nach Meister Yang Chengfu – zertifiziert durch die International Yang Family Tai Chi Chuan Association unter Großmeister Yang Jun.</p>
-        <ul class="features">
+        <span class="text-xs tracking-[0.15em] uppercase text-gold mb-3 font-semibold block">Warum zu uns?</span>
+        <h2 class="font-heading text-[clamp(1.8rem,4vw,2.8rem)] mb-6">Kampfkunst mit System. Verein mit Herz.</h2>
+        <p class="text-[1.05rem] leading-relaxed text-muted max-w-175">Taijiquan ist mehr als Entspannung. Es ist ein präzises Bewegungssystem, das Körperstruktur, Koordination und Energiefluss trainiert. Wir unterrichten den traditionellen Yang-Stil nach Meister Yang Chengfu – zertifiziert durch die International Yang Family Tai Chi Chuan Association unter Großmeister Yang Jun.</p>
+        <ul class="features list-none my-8">
           <li>Fundierte Methodik mit wissenschaftlichem Verständnis</li>
           <li>Schrittweiser Aufbau von innerer Kraft (Jin) und Körperbewusstsein</li>
           <li>Langjährig ausgebildete Lehrkräfte mit internationaler Zertifizierung</li>
           <li>Kölner Vereinsgemeinschaft</li>
         </ul>
-        <p class="section__text" style="margin-top:1rem;">Fachlich korrekt. Menschlich nah. Für jedes Alter geeignet.</p>
+        <p class="text-[1.05rem] leading-relaxed text-muted max-w-175 mt-4">Fachlich korrekt. Menschlich nah. Für jedes Alter geeignet.</p>
       </div>
-      <img class="split__image split__image--contain" src="/bilder/Logo_Startseite_Dao_Yang Family.png" alt="Logo Tai Chi Dao Köln und Yang Family">
+      <img class="rounded object-contain bg-light p-8 aspect-square max-w-100 mx-auto w-full" src="/bilder/Logo_Startseite_Dao_Yang Family.png" alt="Logo Tai Chi Dao Köln und Yang Family">
     </div>
   </div>
 </section>
 
 <!-- 3 Säulen -->
-<section class="section section--alt">
-  <div class="container text-center">
-    <span class="section__label">Was dich erwartet</span>
-    <h2 class="section__title">Drei Säulen unseres Trainings</h2>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pillar__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+<section class="py-24 px-8 bg-light max-md:py-16 max-md:px-6">
+  <div class="max-w-300 mx-auto text-center">
+    <span class="text-xs tracking-[0.15em] uppercase text-gold mb-3 font-semibold block">Was dich erwartet</span>
+    <h2 class="font-heading text-[clamp(1.8rem,4vw,2.8rem)] mb-6">Drei Säulen unseres Trainings</h2>
+    <div class="grid grid-cols-3 gap-12 mt-16 max-md:grid-cols-1 max-md:gap-8">
+      <div class="text-center px-6 py-10">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-cream text-gold">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         </div>
-        <h3 class="pillar__title">Gesundheit &amp; Bewegungsqualität</h3>
-        <p class="pillar__text">Stärke Rücken, Gelenke und Herz-Kreislauf-System. Verbessere Balance, Flexibilität und Körperwahrnehmung durch achtsames Training.</p>
+        <h3 class="font-heading text-xl mb-4">Gesundheit &amp; Bewegungsqualität</h3>
+        <p class="text-[0.95rem] text-muted leading-relaxed">Stärke Rücken, Gelenke und Herz-Kreislauf-System. Verbessere Balance, Flexibilität und Körperwahrnehmung durch achtsames Training.</p>
       </div>
-      <div class="pillar">
-        <div class="pillar__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <div class="text-center px-6 py-10">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-cream text-gold">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         </div>
-        <h3 class="pillar__title">Kampfkunst &amp; Prinzipien</h3>
-        <p class="pillar__text">Erlerne die 10 essenziellen Prinzipien des Tai Chi Chuan nach Yang Chengfu: von Körperstruktur über Atmung bis zur Anwendung in Partnerübungen (Tuishou).</p>
+        <h3 class="font-heading text-xl mb-4">Kampfkunst &amp; Prinzipien</h3>
+        <p class="text-[0.95rem] text-muted leading-relaxed">Erlerne die 10 essenziellen Prinzipien des Tai Chi Chuan nach Yang Chengfu: von Körperstruktur über Atmung bis zur Anwendung in Partnerübungen (Tuishou).</p>
       </div>
-      <div class="pillar">
-        <div class="pillar__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      <div class="text-center px-6 py-10">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-cream text-gold">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
-        <h3 class="pillar__title">Gemeinschaft in Köln</h3>
-        <p class="pillar__text">Ob im Trainingsraum oder im Sommer sonntags beim Outdoor-Training im Grüngürtel („Kölle aktiv") – wir bewegen uns zusammen.</p>
+        <h3 class="font-heading text-xl mb-4">Gemeinschaft in Köln</h3>
+        <p class="text-[0.95rem] text-muted leading-relaxed">Ob im Trainingsraum oder im Sommer sonntags beim Outdoor-Training im Grüngürtel („Kölle aktiv") – wir bewegen uns zusammen.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- News Preview -->
-<section class="section">
-  <div class="container">
-    <span class="section__label">Aktuelles</span>
-    <h2 class="section__title">Neues aus dem Verein</h2>
-    <div class="news-grid">
+<section class="py-24 px-8 max-md:py-16 max-md:px-6">
+  <div class="max-w-300 mx-auto">
+    <span class="text-xs tracking-[0.15em] uppercase text-gold mb-3 font-semibold block">Aktuelles</span>
+    <h2 class="font-heading text-[clamp(1.8rem,4vw,2.8rem)] mb-6">Neues aus dem Verein</h2>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 mt-12">
       {%- for post in collections.news | head(3) %}
-      <div class="news-card">
-        <span class="news-card__date">{{ post.data.displayDate | default(post.date | germanDate) }}</span>
-        <h3 class="news-card__title">{{ post.data.title }}</h3>
-        <p class="news-card__text">{{ post.data.summary }}</p>
+      <div class="bg-white rounded p-8 shadow-[0_2px_20px_rgba(0,0,0,0.06)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
+        <span class="text-xs text-gold tracking-wider uppercase font-semibold">{{ post.data.displayDate | default(post.date | germanDate) }}</span>
+        <h3 class="font-heading text-[1.15rem] my-3">{{ post.data.title }}</h3>
+        <p class="text-sm text-muted leading-relaxed">{{ post.data.summary }}</p>
       </div>
       {%- endfor %}
     </div>
-    <div class="text-center" style="margin-top:2.5rem;">
-      <a href="/aktuelles/" class="btn btn--outline">Mehr Neuigkeiten</a>
+    <div class="text-center mt-10">
+      <a href="/aktuelles/" class="inline-block px-10 py-4 rounded-sm text-[0.95rem] font-medium tracking-widest uppercase transition-all duration-300 border-2 border-gold text-gold bg-transparent hover:bg-gold hover:text-white">Mehr Neuigkeiten</a>
     </div>
   </div>
 </section>
 
 <!-- CTA Banner -->
-<section class="section section--dark text-center">
-  <div class="container">
-    <h2 class="section__title">Bereit für den ersten Schritt?</h2>
-    <p class="section__text section__text--center" style="color:rgba(255,255,255,0.7); margin-bottom:2rem;">Der beste Weg, Taijiquan zu verstehen, ist, es zu spüren. Komm unverbindlich zur Probestunde – in bequemer Kleidung, ohne Vorkenntnisse.</p>
-    <a href="/kontakt/" class="btn btn--primary">Jetzt Kontakt aufnehmen</a>
+<section class="py-24 px-8 bg-ink text-white/85 text-center max-md:py-16 max-md:px-6">
+  <div class="max-w-300 mx-auto">
+    <h2 class="font-heading text-[clamp(1.8rem,4vw,2.8rem)] mb-6 text-white">Bereit für den ersten Schritt?</h2>
+    <p class="text-[1.05rem] leading-relaxed text-white/70 max-w-175 mx-auto text-center mb-8">Der beste Weg, Taijiquan zu verstehen, ist, es zu spüren. Komm unverbindlich zur Probestunde – in bequemer Kleidung, ohne Vorkenntnisse.</p>
+    <a href="/kontakt/" class="inline-block bg-gold text-white px-10 py-4 rounded-sm text-[0.95rem] font-medium tracking-widest uppercase transition-all duration-300 hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(184,149,62,0.3)]">Jetzt Kontakt aufnehmen</a>
   </div>
 </section>

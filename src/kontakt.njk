@@ -6,56 +6,56 @@ permalink: /kontakt/
 ---
 
 <!-- Page Hero -->
-<div class="page-hero">
-  <h1 class="page-hero__title">Bereit für den ersten Schritt?</h1>
-  <p class="page-hero__subtitle">Der beste Weg, Taijiquan zu verstehen, ist, es zu spüren. Komm unverbindlich zur Probestunde.</p>
+<div class="pt-[calc(64px+4rem)] pb-16 px-8 bg-ink text-center">
+  <h1 class="font-heading text-[clamp(2rem,4vw,3rem)] text-white mb-4">Bereit für den ersten Schritt?</h1>
+  <p class="text-white/70 text-[1.1rem] max-w-150 mx-auto">Der beste Weg, Taijiquan zu verstehen, ist, es zu spüren. Komm unverbindlich zur Probestunde.</p>
 </div>
 
 <!-- Contact -->
-<section class="section">
-  <div class="container">
-    <div class="contact-grid">
+<section class="py-24 px-8 max-md:py-16 max-md:px-6">
+  <div class="max-w-300 mx-auto">
+    <div class="grid grid-cols-2 gap-16 mt-12 max-md:grid-cols-1 max-md:gap-8">
       <div>
-        <h2 class="section__title">Schreib uns</h2>
-        <form class="contact-form" action="mailto:{{ site.email }}" method="post" enctype="text/plain">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+        <h2 class="font-heading text-[clamp(1.8rem,4vw,2.8rem)] mb-6">Schreib uns</h2>
+        <form action="mailto:{{ site.email }}" method="post" enctype="text/plain">
+          <div class="mb-6">
+            <label for="name" class="block text-[0.85rem] font-semibold tracking-widest uppercase text-charcoal mb-2">Name</label>
+            <input type="text" id="name" name="name" required class="w-full py-3.5 px-4 border border-cream rounded-sm font-body text-base text-text bg-white transition-colors duration-200 focus:outline-none focus:border-gold">
           </div>
-          <div class="form-group">
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" required>
+          <div class="mb-6">
+            <label for="email" class="block text-[0.85rem] font-semibold tracking-widest uppercase text-charcoal mb-2">E-Mail</label>
+            <input type="email" id="email" name="email" required class="w-full py-3.5 px-4 border border-cream rounded-sm font-body text-base text-text bg-white transition-colors duration-200 focus:outline-none focus:border-gold">
           </div>
-          <div class="form-group">
-            <label for="message">Nachricht <span style="font-weight:400; text-transform:none;">(z.B. Wann möchtest du zur Probestunde kommen?)</span></label>
-            <textarea id="message" name="message"></textarea>
+          <div class="mb-6">
+            <label for="message" class="block text-[0.85rem] font-semibold tracking-widest uppercase text-charcoal mb-2">Nachricht <span class="font-normal normal-case">(z.B. Wann möchtest du zur Probestunde kommen?)</span></label>
+            <textarea id="message" name="message" class="w-full py-3.5 px-4 border border-cream rounded-sm font-body text-base text-text bg-white transition-colors duration-200 resize-y min-h-[140px] focus:outline-none focus:border-gold"></textarea>
           </div>
-          <button type="submit" class="btn btn--primary">Nachricht senden</button>
+          <button type="submit" class="inline-block bg-gold text-white px-10 py-4 rounded-sm text-[0.95rem] font-medium tracking-widest uppercase transition-all duration-300 border-none cursor-pointer hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(184,149,62,0.3)]">Nachricht senden</button>
         </form>
-        <p style="margin-top:1.5rem; font-size:0.9rem; color:var(--color-muted);">Oder schreib uns direkt: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <p class="mt-6 text-sm text-muted">Oder schreib uns direkt: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       </div>
 
       <div>
-        <h2 class="section__title">Trainingsorte</h2>
+        <h2 class="font-heading text-[clamp(1.8rem,4vw,2.8rem)] mb-6">Trainingsorte</h2>
 
-        <div class="contact-info__item">
-          <span class="contact-info__label">Dienstag &amp; Freitag</span>
+        <div class="mb-6">
+          <span class="font-semibold text-charcoal block text-[0.85rem] tracking-widest uppercase mb-1">Dienstag &amp; Freitag</span>
           <p>Görresstraße 1, Köln-Innenstadt<br><small>(Nähe Rathenauplatz)</small></p>
-          <a href="https://www.openstreetmap.org/?mlat=50.93078&mlon=6.93531#map=17/50.93078/6.93531" target="_blank" rel="noopener" style="font-size:0.9rem;">Auf OpenStreetMap anzeigen &rarr;</a>
+          <a href="https://www.openstreetmap.org/?mlat=50.93078&mlon=6.93531#map=17/50.93078/6.93531" target="_blank" rel="noopener" class="text-sm">Auf OpenStreetMap anzeigen &rarr;</a>
         </div>
 
-        <div class="contact-info__item" style="margin-top:2rem;">
-          <span class="contact-info__label">Donnerstag</span>
+        <div class="mb-6 mt-8">
+          <span class="font-semibold text-charcoal block text-[0.85rem] tracking-widest uppercase mb-1">Donnerstag</span>
           <p>Turnhalle, Osterather Str. 13<br>50739 Köln-Nippes</p>
-          <a href="https://www.openstreetmap.org/?mlat=50.95873&mlon=6.93796#map=16/50.95873/6.93796" target="_blank" rel="noopener" style="font-size:0.9rem;">Auf OpenStreetMap anzeigen &rarr;</a>
+          <a href="https://www.openstreetmap.org/?mlat=50.95873&mlon=6.93796#map=16/50.95873/6.93796" target="_blank" rel="noopener" class="text-sm">Auf OpenStreetMap anzeigen &rarr;</a>
         </div>
 
-        <div class="contact-info__item" style="margin-top:2rem;">
-          <span class="contact-info__label">E-Mail</span>
+        <div class="mb-6 mt-8">
+          <span class="font-semibold text-charcoal block text-[0.85rem] tracking-widest uppercase mb-1">E-Mail</span>
           <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         </div>
 
-        <p style="margin-top:2rem; font-size:0.95rem; color:var(--color-muted);">Eine Probestunde ist nach vorheriger Kontaktaufnahme jederzeit möglich – in bequemer Kleidung, ohne Vorkenntnisse.</p>
+        <p class="mt-8 text-[0.95rem] text-muted">Eine Probestunde ist nach vorheriger Kontaktaufnahme jederzeit möglich – in bequemer Kleidung, ohne Vorkenntnisse.</p>
       </div>
     </div>
   </div>
