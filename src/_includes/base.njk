@@ -16,15 +16,15 @@
   <title>{{ htmlTitle | default(title + ' – ' + site.title) }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" href="/bilder/Dao-Favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
 <!-- Navigation -->
-<nav class="fixed top-0 left-0 right-0 h-16 bg-ink/95 backdrop-blur-sm z-[1000] flex items-center justify-between px-8 transition-colors duration-300" id="nav">
-  <a class="text-white font-heading text-[1.1rem] tracking-wide whitespace-nowrap flex items-center gap-2.5" href="/">
+<nav class="fixed top-0 left-0 right-0 h-16 bg-surface/80 backdrop-blur-[20px] z-[1000] flex items-center justify-between px-8 shadow-[0_0_40px_rgba(45,45,45,0.04)]" id="nav">
+  <a class="text-ink font-heading text-[1.1rem] tracking-wide whitespace-nowrap flex items-center gap-2.5" href="/">
     <img class="w-8 h-8 shrink-0" src="/bilder/Dao-Favicon.svg" alt="Logo">Yang Family – Tai Chi Dao Köln
   </a>
   <ul class="nav-menu list-none flex gap-8 max-md:hidden" id="navLinks">
@@ -36,7 +36,7 @@
       { url: "/kontakt/", label: "Kontakt" }
     ] -%}
     {%- for item in navItems %}
-    <li><a href="{{ item.url }}" class="text-white/80 text-sm tracking-widest uppercase py-2 border-b-2 border-transparent transition-colors duration-200 hover:text-gold-light hover:border-gold {% if page.url == item.url %}text-gold-light! border-gold!{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label | safe }}</a></li>
+    <li><a href="{{ item.url }}" class="text-ink/70 text-sm tracking-widest uppercase py-2 border-b-2 border-transparent transition-colors duration-200 hover:text-gold hover:border-gold {% if page.url == item.url %}text-gold! border-gold!{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label | safe }}</a></li>
     {%- endfor %}
   </ul>
   <button class="hidden max-md:block bg-transparent border-none cursor-pointer p-2" id="navToggle" aria-label="Menü öffnen">
@@ -56,29 +56,29 @@
     <div>
       <div class="font-heading text-white text-base mb-4">Navigation</div>
       <ul class="list-none">
-        <li class="mb-2"><a href="/" class="text-white/60 text-sm hover:text-gold-light">Startseite</a></li>
-        <li class="mb-2"><a href="/training/" class="text-white/60 text-sm hover:text-gold-light">Training &amp; Kurse</a></li>
-        <li class="mb-2"><a href="/ueber-uns/" class="text-white/60 text-sm hover:text-gold-light">Über uns</a></li>
-        <li class="mb-2"><a href="/aktuelles/" class="text-white/60 text-sm hover:text-gold-light">Aktuelles</a></li>
-        <li class="mb-2"><a href="/kontakt/" class="text-white/60 text-sm hover:text-gold-light">Kontakt</a></li>
+        <li class="mb-2"><a href="/" class="text-white/60 text-sm hover:text-white">Startseite</a></li>
+        <li class="mb-2"><a href="/training/" class="text-white/60 text-sm hover:text-white">Training &amp; Kurse</a></li>
+        <li class="mb-2"><a href="/ueber-uns/" class="text-white/60 text-sm hover:text-white">Über uns</a></li>
+        <li class="mb-2"><a href="/aktuelles/" class="text-white/60 text-sm hover:text-white">Aktuelles</a></li>
+        <li class="mb-2"><a href="/kontakt/" class="text-white/60 text-sm hover:text-white">Kontakt</a></li>
       </ul>
     </div>
     <div>
       <div class="font-heading text-white text-base mb-4">Kontakt</div>
       <ul class="list-none">
-        <li class="mb-2"><a href="mailto:{{ site.email }}" class="text-white/60 text-sm hover:text-gold-light">{{ site.email }}</a></li>
-        <li class="mb-2"><a href="/kontakt/" class="text-white/60 text-sm hover:text-gold-light">Probestunde anfragen</a></li>
+        <li class="mb-2"><a href="mailto:{{ site.email }}" class="text-white/60 text-sm hover:text-white">{{ site.email }}</a></li>
+        <li class="mb-2"><a href="/kontakt/" class="text-white/60 text-sm hover:text-white">Probestunde anfragen</a></li>
       </ul>
     </div>
   </div>
-  <div class="max-w-300 mx-auto mt-12 pt-8 border-t border-white/10 flex justify-between text-[0.85rem] max-md:flex-col max-md:gap-2 max-md:text-center">
+  <div class="max-w-300 mx-auto mt-16 pt-8 flex justify-between text-[0.85rem] max-md:flex-col max-md:gap-2 max-md:text-center">
     <span>&copy; 2026 {{ site.title }}</span>
-    <span><a href="/impressum/" class="text-white/60 hover:text-gold-light">Impressum</a> · <a href="/impressum/#datenschutz" class="text-white/60 hover:text-gold-light">Datenschutz</a></span>
+    <span><a href="/impressum/" class="text-white/60 hover:text-white">Impressum</a> · <a href="/impressum/#datenschutz" class="text-white/60 hover:text-white">Datenschutz</a></span>
   </div>
 </footer>
 
 <!-- Scroll to top -->
-<button class="scroll-top fixed bottom-8 right-8 w-12 h-12 bg-gold text-white border-none rounded-full cursor-pointer text-xl flex items-center justify-center opacity-0 invisible transition-all duration-300 z-[900] shadow-lg hover:-translate-y-1" id="scrollTop" aria-label="Nach oben">&#8593;</button>
+<button class="scroll-top fixed bottom-8 right-8 w-12 h-12 bg-gold text-white border-none cursor-pointer text-xl flex items-center justify-center opacity-0 invisible transition-all duration-300 z-[900] hover:-translate-y-1" id="scrollTop" aria-label="Nach oben">&#8593;</button>
 
 <script>
 // Mobile nav toggle

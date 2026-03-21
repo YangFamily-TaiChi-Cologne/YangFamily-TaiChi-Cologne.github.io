@@ -12,7 +12,7 @@ permalink: /kontakt/
 </div>
 
 <!-- Contact -->
-<section class="py-24 px-8 max-md:py-16 max-md:px-6">
+<section class="py-28 px-8 max-md:py-16 max-md:px-6">
   <div class="max-w-300 mx-auto">
     <div class="grid grid-cols-2 gap-16 mt-12 max-md:grid-cols-1 max-md:gap-8">
       <div>
@@ -20,17 +20,17 @@ permalink: /kontakt/
         <form action="mailto:{{ site.email }}" method="post" enctype="text/plain">
           <div class="mb-6">
             <label for="name" class="block text-[0.85rem] font-semibold tracking-widest uppercase text-charcoal mb-2">Name</label>
-            <input type="text" id="name" name="name" required class="w-full py-3.5 px-4 border border-cream rounded-sm font-body text-base text-text bg-white transition-colors duration-200 focus:outline-none focus:border-gold">
+            <input type="text" id="name" name="name" required class="w-full py-3.5 px-4 border border-ink/15 font-body text-base text-text bg-white transition-colors duration-200 focus:outline-none focus:border-gold">
           </div>
           <div class="mb-6">
             <label for="email" class="block text-[0.85rem] font-semibold tracking-widest uppercase text-charcoal mb-2">E-Mail</label>
-            <input type="email" id="email" name="email" required class="w-full py-3.5 px-4 border border-cream rounded-sm font-body text-base text-text bg-white transition-colors duration-200 focus:outline-none focus:border-gold">
+            <input type="email" id="email" name="email" required class="w-full py-3.5 px-4 border border-ink/15 font-body text-base text-text bg-white transition-colors duration-200 focus:outline-none focus:border-gold">
           </div>
           <div class="mb-6">
             <label for="message" class="block text-[0.85rem] font-semibold tracking-widest uppercase text-charcoal mb-2">Nachricht <span class="font-normal normal-case">(z.B. Wann möchtest du zur Probestunde kommen?)</span></label>
             <textarea id="message" name="message" class="w-full py-3.5 px-4 border border-cream rounded-sm font-body text-base text-text bg-white transition-colors duration-200 resize-y min-h-[140px] focus:outline-none focus:border-gold"></textarea>
           </div>
-          <button type="submit" class="inline-block bg-gold text-white px-10 py-4 rounded-sm text-[0.95rem] font-medium tracking-widest uppercase transition-all duration-300 border-none cursor-pointer hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(184,149,62,0.3)]">Nachricht senden</button>
+          <button type="submit" class="btn-primary border-none cursor-pointer">Nachricht senden</button>
         </form>
         <p class="mt-6 text-sm text-muted">Oder schreib uns direkt: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       </div>

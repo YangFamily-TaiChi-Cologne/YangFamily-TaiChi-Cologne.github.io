@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #1a1a2e;
-  --color-charcoal: #2d2d3d;
-  --color-text: #3a3a4a;
-  --color-muted: #6b6b7b;
-  --color-light: #f7f5f0;
-  --color-cream: #eee9df;
-  --color-gold: #b8953e;
-  --color-gold-light: #d4b565;
+  --color-ink: #2D2D2D;
+  --color-charcoal: #2D2D2D;
+  --color-text: #2D2D2D;
+  --color-muted: #5F5E5E;
+  --color-light: #F3F3F3;
+  --color-cream: #E8E8E8;
+  --color-surface: #FAFAFA;
+  --color-gold: #C41E3A;
+  --color-gold-light: #D4384F;
+  --color-gold-dark: #9E0027;
   --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* ===== Base styles ===== */
@@ -23,6 +25,7 @@
   body {
     font-family: var(--font-body);
     color: var(--color-text);
+    background: var(--color-surface);
     line-height: 1.7;
     font-size: 17px;
   }
@@ -34,25 +37,25 @@
   }
 
   a {
-    color: var(--color-gold);
+    color: var(--color-ink);
     text-decoration: none;
     transition: color 0.2s;
   }
 
   a:hover {
-    color: var(--color-gold-light);
+    color: var(--color-gold);
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--color-ink);
-    line-height: 1.3;
+    line-height: 1.2;
   }
 }
 
 /* ===== Custom components ===== */
 @layer components {
-  /* Features list with gold bullet */
+  /* Features list with red accent bullet */
   .features li {
     padding: 0.6rem 0 0.6rem 2rem;
     position: relative;
@@ -70,9 +73,13 @@
     background: var(--color-gold);
   }
 
-  /* Schedule table hover */
-  .schedule tr:hover td {
+  /* Schedule table – tonal layering, no borders */
+  .schedule tr:nth-child(even) td {
     background: var(--color-light);
+  }
+
+  .schedule tr:hover td {
+    background: var(--color-cream);
   }
 
   /* Timeline */
@@ -113,7 +120,7 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: white;
+    background: var(--color-ink);
     margin: 5px 0;
     transition: transform 0.3s;
   }
@@ -138,13 +145,12 @@
     opacity: 0.45;
   }
 
-  /* Video wrapper (16:9) */
+  /* Video wrapper (16:9) – no border-radius */
   .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    border-radius: 4px;
     margin: 2rem 0;
   }
 
@@ -155,6 +161,43 @@
     width: 100%;
     height: 100%;
     border: 0;
+  }
+
+  /* Primary CTA – "Seal" style: gradient, square corners */
+  .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold));
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover {
+    color: white;
+    opacity: 0.92;
+    transform: translateY(-2px);
+  }
+
+  /* Tertiary – ghost border, underline on hover */
+  .btn-tertiary {
+    display: inline-block;
+    color: var(--color-ink);
+    padding: 1rem 2.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid rgba(45, 45, 45, 0.15);
+    transition: all 0.3s;
+  }
+
+  .btn-tertiary:hover {
+    color: var(--color-ink);
+    text-decoration: underline;
   }
 
   /* Scroll top visibility toggle (JS adds .visible) */
@@ -171,7 +214,9 @@
     top: 64px;
     left: 0;
     right: 0;
-    background: rgba(26, 26, 46, 0.98);
+    background: rgba(250, 250, 250, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
@@ -190,6 +235,7 @@
   .nav-menu a {
     padding: 1rem 0;
     font-size: 1rem;
+    color: var(--color-ink);
   }
 }
 
