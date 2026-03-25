@@ -1,0 +1,14 @@
+{
+  "dmPolicy": "allowlist",
+  "allowFrom": [
+    "236015856235053066",
+    "1486280843214323782"
+  ],
+  "groups": {
+    "1486301828902817953": {
+      "requireMention": true,
+      "allowFrom": []
+    }
+  },
+  "pending": {}
+}
