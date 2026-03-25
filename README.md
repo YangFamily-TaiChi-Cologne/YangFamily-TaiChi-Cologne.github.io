@@ -9,6 +9,7 @@
 ```fish
 /plugin install discord@claude-plugins-official
 scp .claude/channels/discord/.env fbb@wien:/Users/fbb/c/github/YangFamily-TaiChi-Cologne.github.io/.claude/channels/discord/.env
+DISCORD_STATE_DIR="$(pwd)/.claude/channels/discord" claude -c --dangerously-skip-permissions --channels plugin:discord@claude-plugins-official
 ```
 
 ## manual
