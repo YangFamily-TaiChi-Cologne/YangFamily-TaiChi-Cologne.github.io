@@ -8,7 +8,7 @@
 
 ```fish
 /plugin install discord@claude-plugins-official
-scp .claude/channels/discord/.env fbb@wien:/Users/fb/c/github/YangFamily-TaiChi-Cologne.github.io/.claude/channels/discord/.env
+scp .claude/channels/discord/.env fbb@wien:/Users/fbb/c/github/YangFamily-TaiChi-Cologne.github.io/.claude/channels/discord/.env
 ```
 
 ## manual
