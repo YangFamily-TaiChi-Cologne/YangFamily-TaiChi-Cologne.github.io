@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "discord": {
+      "command": "bun",
+      "args": ["run", "--cwd", "/Users/fbb/.claude/plugins/marketplaces/claude-plugins-official/external_plugins/discord", "--shell=bun", "--silent", "start"],
+      "env": {
+        "DISCORD_STATE_DIR": "/Users/fbb/c/github/YangFamily-TaiChi-Cologne.github.io/.claude/channels/discord"
+      }
+    }
+  }
+}
