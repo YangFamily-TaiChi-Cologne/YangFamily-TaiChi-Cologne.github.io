@@ -7,6 +7,11 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/news/*.md").sort((a, b) => b.date - a.date);
   });
 
+  // ISO date filter for sitemap
+  eleventyConfig.addFilter("dateIso", function (date) {
+    return new Date(date).toISOString().split('T')[0];
+  });
+
   // Head filter (take first n items)
   eleventyConfig.addFilter("head", function (array, n) {
     return (array || []).slice(0, n);

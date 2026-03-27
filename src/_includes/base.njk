@@ -18,14 +18,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="de-DE" href="{{ site.url }}{{ page.url }}">
   <link rel="icon" href="/bilder/Dao-Favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/bilder/taichdao-logo-ink.png",
+    "email": "{{ site.email }}",
+    "telephone": "{{ site.phone }}",
+    "description": "Authentisches Taijiquan in Köln. Traditionell zertifiziert durch die International Yang Family Tai Chi Chuan Association.",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Görresstraße 1",
+        "addressLocality": "Köln",
+        "postalCode": "50931",
+        "addressCountry": "DE"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Osterather Str. 13",
+        "addressLocality": "Köln",
+        "postalCode": "50739",
+        "addressCountry": "DE"
+      }
+    ],
+    "areaServed": { "@type": "City", "name": "Köln" },
+    "sport": "Tai Chi Chuan",
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
 
 <!-- Navigation -->
 <nav class="fixed top-0 left-0 right-0 h-16 bg-surface/80 backdrop-blur-[20px] z-[1000] flex items-center justify-between px-8 shadow-[0_0_40px_rgba(45,45,45,0.04)]" id="nav">
   <a class="text-ink font-heading text-[1.1rem] tracking-wide whitespace-nowrap flex items-center gap-2.5" href="/">
-    <img class="h-12 shrink-0" src="/bilder/taichdao-logo-ink.png" alt="Logo">Yang Family – Tai Chi Dao Köln
+    <img class="h-12 shrink-0" src="/bilder/taichdao-logo-ink.png" alt="Logo" loading="lazy">Yang Family – Tai Chi Dao Köln
   </a>
   <ul class="nav-menu list-none flex gap-8 max-md:hidden" id="navLinks">
     {%- set navItems = [
