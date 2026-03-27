@@ -17,3 +17,8 @@ jsnd will send requests via Discord. When a message arrives from him:
 4. **Notify jsnd via Discord** — ping him when the deployment is triggered (push done), or immediately if you have questions or the request cannot be completed
 
 If a request is unclear or cannot be completed, reply on Discord asking for clarification before making any changes.
+
+## Toolchain
+
+- Use **`bun`** instead of `npm` for running scripts (e.g. `bun run build`)
+- Use **`jj`** instead of `git` for version control (e.g. `jj describe`, `jj bookmark set main -r @`, `jj git push`)
