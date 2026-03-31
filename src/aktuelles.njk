@@ -39,9 +39,18 @@ permalink: /aktuelles/
     <div class="timeline my-12">
       {%- for post in collections.news %}
       <div class="timeline__item">
-        <span class="text-xs text-gold tracking-wider uppercase font-semibold">{{ post.data.displayDate | default(post.date | germanDate) }}</span>
-        <h3 class="font-heading text-[1.15rem] my-2">{{ post.data.title }}</h3>
-        <div class="text-[0.95rem] text-muted">{{ post.templateContent | safe }}</div>
+        <div class="flex gap-8 items-start max-md:flex-col">
+          <div class="flex-1 min-w-0">
+            <span class="text-xs text-gold tracking-wider uppercase font-semibold">{{ post.data.displayDate | default(post.date | germanDate) }}</span>
+            <h3 class="font-heading text-[1.15rem] my-2">{{ post.data.title }}</h3>
+            <div class="text-[0.95rem] text-muted">{{ post.templateContent | safe }}</div>
+          </div>
+          {% if post.data.image %}
+          <div class="shrink-0 w-40 max-md:w-full">
+            <img src="{{ post.data.image }}" alt="{{ post.data.title }}" class="w-full h-28 max-md:h-48 object-cover" loading="lazy">
+          </div>
+          {% endif %}
+        </div>
       </div>
       {%- endfor %}
     </div>
