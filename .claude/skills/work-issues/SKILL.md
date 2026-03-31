@@ -19,12 +19,12 @@ You are working through GitHub issues assigned to you on this project.
 
 ## Workflow
 
-### Step 1 — List assigned issues
+### Step 1 — List claude issues
 
 ```bash
 gh issue list \
   --repo YangFamily-TaiChi-Cologne/YangFamily-TaiChi-Cologne.github.io \
-  --assignee mmaier589 \
+  --label claude \
   --state open
 ```
 
@@ -32,7 +32,7 @@ If there are no open issues, report that and stop.
 
 ### Step 2 — Read each issue
 
-For each issue:
+For each issue <N>:
 
 ```bash
 gh issue view <N> \
@@ -40,37 +40,23 @@ gh issue view <N> \
   --comments
 ```
 
-Read the title, body, and **all comments** carefully before deciding on action.
-
-### Step 3 — Decide: solve or close with comment
-
-**Solve it** if the issue describes a concrete, actionable code change.
-
-**Close with a comment** if:
-- It's already done (verify first)
-- It's out of scope or not actionable
-- It needs more information from Frank — add a question as a comment and leave open
+- Read the title, body, and **all comments** carefully.
+- Then read last comment as instructions, and work on it.
 
 ### Step 4 — Implement the fix
 
-Make the necessary changes to local source files. Then verify with a build:
-
-```bash
-bunx @11ty/eleventy
-```
-
-Ensure the build completes with no errors before committing.
+- Make the necessary changes to local source files.
+- Then verify with a build: `bun run build`
 
 ### Step 5 — Commit with jj
+
+- Ensure the build completes with no errors before committing.
 
 ```bash
 jj describe -m "<short description> (closes #<N>)
 
 <optional longer description of what was done>"
 ```
-
-Always include `closes #<N>` in the commit message.
-
 Then advance the main bookmark and push:
 
 ```bash
@@ -78,14 +64,20 @@ jj bookmark set main -r @
 jj git push
 ```
 
-### Step 6 — Close the issue via gh CLI
 
-GitHub Pages repos do not auto-close issues from commit messages. Always close explicitly:
+### Step 3 — Add a comment with your action
 
 ```bash
-gh issue close <N> \
+gh issue comment <N> --repo YangFamily-TaiChi-Cologne/YangFamily-TaiChi-Cologne.github.io --body "your comment here"
+```
+
+
+### Step 6 — Remove tag claude from issue via gh CLI
+
+```bash
+gh issue edit <N> \
   --repo YangFamily-TaiChi-Cologne/YangFamily-TaiChi-Cologne.github.io \
-  --comment "<brief explanation of what was done>"
+  --remove-label "claude"
 ```
 
 ### Step 7 — Notify on Discord
