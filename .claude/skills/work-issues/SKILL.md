@@ -1,7 +1,7 @@
 ---
 name: work-issues
 version: 1.0.0
-description: Work through open GitHub issues assigned to this bot (mmaier589). Reads each issue and its comments, solves or responds, commits with `closes #N`, pushes via jj, and closes via gh CLI. Also notifies via Discord when relevant.
+description: Work through open GitHub issues assigned to this bot (mmaier589). Reads each issue and its comments, solves or responds, commits with `refs #N` (never closes), pushes via jj, removes the claude label, and notifies via Discord when relevant.
 ---
 
 # Work Issues
@@ -53,7 +53,7 @@ gh issue view <N> \
 - Ensure the build completes with no errors before committing.
 
 ```bash
-jj describe -m "<short description> (closes #<N>)
+jj describe -m "<short description> (refs #<N>)
 
 <optional longer description of what was done>"
 ```
@@ -67,7 +67,7 @@ jj git push
 
 ### Step 5 — Add a comment with your action, remove tag "claude"
 
-- do not close issue
+- **Do NOT close the issue** — neither via `gh issue close` nor via `closes #N` in commit messages
 ```bash
 gh issue comment <N> \
   --repo YangFamily-TaiChi-Cologne/YangFamily-TaiChi-Cologne.github.io \
@@ -88,6 +88,6 @@ If the issue was raised via Discord (or Frank asked you to work issues via Disco
 
 - **Read all comments** before starting — the fix may have been clarified or changed in comments
 - **Never skip the build check** — broken builds break the live site
-- **Always close via `gh issue close`** — commit messages alone don't close issues here
+- **Never close issues** — not via `gh issue close`, not via `closes #N` in commits (use `refs #N` instead)
 - **One commit per issue** — keep the history clean
 - **Ask Frank** if the issue is ambiguous and can't be resolved without more context — add a comment to the issue and leave it open
