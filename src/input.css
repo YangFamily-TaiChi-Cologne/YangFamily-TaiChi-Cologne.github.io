@@ -73,13 +73,26 @@
     background: var(--color-gold);
   }
 
-  /* Schedule table – tonal layering, no borders */
-  .schedule tr:nth-child(even) td {
-    background: var(--color-light);
+  /* Schedule table – zebra stripes + interactive hover */
+  .schedule tbody tr:nth-child(odd) td {
+    background: #ffffff;
   }
 
-  .schedule tr:hover td {
+  .schedule tbody tr:nth-child(even) td {
     background: var(--color-cream);
+  }
+
+  .schedule tbody tr {
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+  }
+
+  .schedule tbody tr:hover td {
+    background: rgba(196, 30, 58, 0.07);
+  }
+
+  .schedule tbody tr:hover td:first-child {
+    box-shadow: inset 3px 0 0 var(--color-gold);
   }
 
   /* Timeline */
