@@ -95,6 +95,33 @@
     box-shadow: inset 3px 0 0 var(--color-gold);
   }
 
+  /* Two-column layout: text left, image placeholder right */
+  .two-col-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .two-col-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  .img-placeholder {
+    background: var(--color-cream);
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
   /* Timeline */
   .timeline {
     position: relative;
