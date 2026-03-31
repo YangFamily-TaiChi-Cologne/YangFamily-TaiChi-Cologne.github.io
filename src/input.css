@@ -208,7 +208,7 @@
 }
 
 /* ===== Mobile nav open state ===== */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav-menu {
     position: fixed;
     top: 64px;

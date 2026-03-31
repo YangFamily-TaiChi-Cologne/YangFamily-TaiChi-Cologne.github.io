@@ -67,7 +67,7 @@
   <a class="text-ink font-heading text-[1.1rem] tracking-wide whitespace-nowrap flex items-center gap-2.5" href="/">
     <img class="h-12 shrink-0" src="/bilder/taichdao-logo-ink.png" alt="Logo" loading="lazy">Yang Family – Tai Chi Dao Köln
   </a>
-  <ul class="nav-menu list-none flex gap-8 max-md:hidden" id="navLinks">
+  <ul class="nav-menu list-none flex gap-8 max-lg:hidden" id="navLinks">
     {%- set navItems = [
       { url: "/", label: "Startseite" },
       { url: "/training/", label: "Training &amp; Kurse" },
@@ -76,10 +76,10 @@
       { url: "/kontakt/", label: "Kontakt" }
     ] -%}
     {%- for item in navItems %}
-    <li><a href="{{ item.url }}" class="text-ink/70 text-sm tracking-widest uppercase py-2 border-b-2 border-transparent transition-colors duration-200 hover:text-gold hover:border-gold {% if page.url == item.url %}text-gold! border-gold!{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label | safe }}</a></li>
+    <li><a href="{{ item.url }}" class="text-ink/70 text-sm tracking-widest uppercase h-16 flex items-center border-b-2 border-transparent transition-colors duration-200 hover:text-gold hover:border-gold {% if page.url == item.url %}text-gold! border-gold!{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label | safe }}</a></li>
     {%- endfor %}
   </ul>
-  <button class="hidden max-md:block bg-transparent border-none cursor-pointer p-2" id="navToggle" aria-label="Menü öffnen">
+  <button class="hidden max-lg:block bg-transparent border-none cursor-pointer p-2" id="navToggle" aria-label="Menü öffnen">
     <span class="nav-toggle"><span></span><span></span><span></span></span>
   </button>
 </nav>
