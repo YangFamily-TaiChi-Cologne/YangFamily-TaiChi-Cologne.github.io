@@ -43,12 +43,12 @@ gh issue view <N> \
 - Read the title, body, and **all comments** carefully.
 - Then read last comment as instructions, and work on it.
 
-### Step 4 — Implement the fix
+### Step 3 — Implement the fix
 
 - Make the necessary changes to local source files.
 - Then verify with a build: `bun run build`
 
-### Step 5 — Commit with jj
+### Step 4 — Commit with jj
 
 - Ensure the build completes with no errors before committing.
 
@@ -65,22 +65,20 @@ jj git push
 ```
 
 
-### Step 3 — Add a comment with your action
+### Step 5 — Add a comment with your action, remove tag "claude"
 
+- do not close issue
 ```bash
-gh issue comment <N> --repo YangFamily-TaiChi-Cologne/YangFamily-TaiChi-Cologne.github.io --body "your comment here"
-```
+gh issue comment <N> \
+  --repo YangFamily-TaiChi-Cologne/YangFamily-TaiChi-Cologne.github.io \
+  --body "<summary of actions>"
 
-
-### Step 6 — Remove tag claude from issue via gh CLI
-
-```bash
 gh issue edit <N> \
   --repo YangFamily-TaiChi-Cologne/YangFamily-TaiChi-Cologne.github.io \
   --remove-label "claude"
 ```
 
-### Step 7 — Notify on Discord
+### Step 6 — Notify on Discord
 
 If the issue was raised via Discord (or Frank asked you to work issues via Discord), reply with a summary of what was fixed.
 
