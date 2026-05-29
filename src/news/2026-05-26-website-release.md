@@ -1,12 +1,9 @@
 ---
-title: "veroeffentlichung unser neuen Webseite"
-date: 2026-05-26
-displayDate: "26. Mai 2026"
+title: "Veröffentlichung unses neuen Webdesigns"
+date: 2026-05-29
+displayDate: "29. Mai 2026"
 ---
 
-Bla
+Heute haben wir das Design unserer Webseite erneuert.
 
-neue Zeile
-
-* erstens
-* zweitens
+Vielen Danke an alle Beteiligten (Joel, Gerrit, Daniel, Christian und Frank).
