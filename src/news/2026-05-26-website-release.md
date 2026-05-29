@@ -1,5 +1,5 @@
 ---
-title: "Veröffentlichung unses neuen Webdesigns"
+title: "Veröffentlichung unseres neuen Webdesigns"
 date: 2026-05-29
 displayDate: "29. Mai 2026"
 ---
