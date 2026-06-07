@@ -87,6 +87,21 @@ permalink: /
   </div>
 </section>
 
+<!-- Kölle Aktiv floating notification -->
+<div id="koelleNotif" class="fixed bottom-24 right-6 z-[950] max-w-[280px] bg-white shadow-[0_4px_24px_rgba(0,0,0,0.14)] border-l-4 border-gold p-4">
+  <button onclick="(function(){document.getElementById('koelleNotif').style.display='none';try{sessionStorage.setItem('koelleNotifDismissed','1')}catch(e){}})();" class="absolute top-2 right-2 text-muted hover:text-ink text-xl leading-none cursor-pointer bg-transparent border-none p-0" aria-label="Schließen">×</button>
+  <span class="text-xs tracking-[0.12em] uppercase text-gold font-semibold block mb-1">Sommer-Special</span>
+  <strong class="font-heading text-[1rem] block mb-1.5">Kölle Aktiv</strong>
+  <p class="text-[0.82rem] text-muted leading-snug mb-3">Freitag & Sonntag: Taijiquan & Qigong im Grüngürtel – kostenlos, ohne Anmeldung. Jetzt ausprobieren!</p>
+  <div class="flex flex-col gap-1.5">
+    <a href="/training/#koelle-aktiv" class="text-[0.82rem] text-gold font-semibold hover:underline">Mehr erfahren →</a>
+    <a href="https://koelle-aktiv.de/events/taijiquan-qigong2/" target="_blank" rel="noopener" class="text-[0.82rem] text-muted hover:text-ink hover:underline">koelle-aktiv.de ↗</a>
+  </div>
+</div>
+<script>
+try { if (sessionStorage.getItem('koelleNotifDismissed')) document.getElementById('koelleNotif').style.display = 'none'; } catch(e) {}
+</script>
+
 <!-- CTA Banner -->
 <section class="py-28 px-8 bg-ink text-white/85 text-center max-md:py-16 max-md:px-6">
   <div class="max-w-300 mx-auto">
